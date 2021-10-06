@@ -680,7 +680,7 @@
               <tbody>
                 <tr>
                   <td>monoColorOptions</td>
-                  <td>Lista de ids de opción. Valores separados por comas.<br><br>Las opciones cuyo id esté en esta lista, sus valores permitirán este funcionamiento.</td>
+                  <td>Lista de ids de opción. Valores separados por comas.<br><br>Las opciones cuyo id esté en esta lista, sus valores permitirán este funcionamiento.<br><br>Los ids que no existan en ningun step, serán omitidos e ignorados.</td>
                   <td>24</td>
                   <td><code>Toe___Toe___Color___1-010003-999-0000,Vamp___Vamp___Color___1-080514-999-0000</code></td>
                 </tr>
@@ -3273,7 +3273,8 @@
             
                 <div id="collap--20000" class="collapse" aria-labelledby="headingAcc-20000" data-parent="#accOthers">
                   <div class="card-body">
-                    <p>Todas las imagenes generadas al comprar un producto se guardan en el FTP en la carpeta <b>/threedium/*</b></p>
+                    <p>Todas las imagenes generadas al comprar un producto se guardan en el FTP en la carpeta <b>/threedium/orders*</b> y 
+                      todas las imagenes generadas al compartir un producto se guardan en la carpeta <b>/threedium/shared*</b></p>
 
                     <div class="callout-block callout-block-info">
 
@@ -3418,6 +3419,12 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12">
+                <h6 class="mt-3"><span>Version 1.1.18</span> - 14/09/2021</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Pequeña aclaración en la descripción de <a href="#etiquetas-monocolor">Etiquetas->Sistema monocolor</a></li>
+                  <li class="ml-3">Actualización de la FAQ: "Donde se guardan las imagenes generadas de los modelos comprados (FTP)"</li>
+                </ul>
+
                 <h6 class="mt-3"><span>Version 1.1.17</span> - 26/08/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida duda "Donde se guardan las imagenes generadas de los modelos comprados (FTP)" en <a href="#faqs-otros">FAQs->Otros</a></li>
