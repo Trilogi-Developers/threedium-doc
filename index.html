@@ -366,6 +366,14 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto expandable" href="#stitches-c">Costura</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#stitches-c-color">Color</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="nav-item section-title">
@@ -3165,7 +3173,7 @@
           </section>
 
           <section class="docs-section" id="costura-color">
-            <h3 class="section-heading"><span class="intostep">Stitching/</span>Color <span class="docs-time">Stitching/Color</span></h3>
+            <h3 class="section-heading"><span class="intostep">Costura/</span>Color <span class="docs-time">Stitching/Color</span></h3>
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
@@ -4152,6 +4160,78 @@
             </table>
           </section>
 
+          <!-- ------------ -->
+
+          <section class="docs-section" id="stitches-c">
+            <h2 class="section-heading">Costura</h2>
+            <p>El step de la costura consta de una sola opción de Logicommerce.</p>
+          </section>
+
+          <section class="docs-section" id="stitches-c-color">
+            <h3 class="section-heading"><span class="intostep">Costura/</span>Color <span class="docs-time">Stitching_Belt/Color</span></h3>
+            
+            <h4 class="section-heading pt-3">Configuración opción</h4>
+            <p>Configuración básica de los campos de la opción</p>
+            <table class="mt-4 table table-bordered">
+              <thead>
+                <tr>
+                  <th>Id interno</th>
+                  <th>Type</th>
+                  <th>Nombre</th>
+                  <th>Mensaje front office</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Stitching_Belt___Stitching_Belt___Color___&lt;uid&gt;</code></td>
+                  <td><code>BELT_STITCHES</code></td>
+                  <td>Costura</td>
+                  <td>
+                    <!-- Seleccione el color de la &lt;b&gt;costura&lt;/b&gt; -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="section-heading pt-3">Parametros del id de valor de opción</h4>
+            <p>Todos los ids de los valores tendrán que tener
+              definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).</p>
+            
+            <table class="mt-4 table table-bordered valueIdparams">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                  <th style="width: 50%;">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Material</td>
+                  <td><code>Stitches_Black_HILO-0029</code></td>
+                  <td>Material de Threedium, será diferente en cada valor de opción.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Grupo de Threedium</td>
+                  <td><code>Stitches</code></td>
+                  <td>Valor fijo en esta opción, identifica el grupo de Threedium que contiene las diferentes partes de costuras del cinturón</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Id de producto</td>
+                  <td><code>1-010003-999-0000</code></td>
+                  <td>Id de producto, para crear un identificador único</td>
+                </tr>
+              </tbody>
+              <caption>
+              Ejemplo completo: <code class="split">Stitches_Black_HILO-0029___Stitches___1-010003-999-0000</code>
+              </caption>
+            </table>
+          </section>
+
         </article>
 
         <article class="docs-article" id="resumen">
@@ -4535,9 +4615,14 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12">
+                <h6 class="mt-3"><span>Version 1.2.1</span> - 4/3/2022</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Añadida el step de cinturón <a href="#stitches-c">Costura</a>.</li>
+                </ul>
+
                 <h6 class="mt-3"><span>Version 1.2.0</span> - 3/3/2022</h6>
                 <ul class="mt-3 mb-5">
-                  <li class="ml-3">Añadido documentació de <a href="#steps-c">Steps cinturón</a> con tipos de opcion nuevos.</li>
+                  <li class="ml-3">Añadido documentación de <a href="#steps-c">Steps cinturón</a> con tipos de opcion nuevos.</li>
                   <li class="ml-3">Arreglos menores de la documentación.</li>
                 </ul>
 
