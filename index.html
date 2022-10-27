@@ -59,10 +59,12 @@
     @media (min-width: 1500px) {.container, .container-lg, .container-md, .container-sm, .container-xl {max-width: 1340px;}}
     h3.section-heading small {font-size: 50%;font-weight: 400;}
     .lvl2 {font-size: .875rem;}
-    .docs-nav .lvl2 .nav-link {padding: 0.35rem 1rem;}
+    .docs-nav .lvl2 .nav-link {padding: 0.35rem 1rem;gap: .5rem;}
+    .docs-nav .lvl2 .nav-link > code {font-size: 11px;color: #b9b9b9;line-height: 1;margin-top: 2px;}
+    .docs-nav .lvl2 > li > ul.lvl3 > li > .nav-link {flex-direction: column;align-items: flex-start;gap: 0;padding-block: 4px;}
     .lvl3 {display: none;}
     .docs-nav .lvl2 .nav-link.active + .lvl3 {display: block;}
-    #results a span {color: #252930;}
+    #results a span {color: #252930;font-size: 11px;}
     td.bbt5 {border-bottom-width: 5px;}
     .btn-changelog {border-radius: 1.5rem;}
     body:not(.access-guaranted) {display: none !important;}
@@ -166,7 +168,7 @@
           </li>
           <li class="nav-item section-title">
             <a class="nav-link scrollto" href="#steps">Steps zapatos</a>
-            <ul class="nav flex-column mt-2 lvl2">
+            <ul class="nav flex-column mt-2 lvl2 steps-options">
               <li class="nav-item">
                 <a class="nav-link scrollto expandable" href="#puntera">Puntera</a>
                 <ul class="nav flex-column mt-1 lvl3">
@@ -217,6 +219,23 @@
                   </li>
                   <li class="nav-item section-child">
                     <a class="nav-link scrollto" href="#forro-inscription-tarifa">Inscripción (tarifa)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto expandable" href="#forro-merino">Forro (Merino)</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#forro-color-merino">Piel</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#forro-plantilla-merino">Plantilla</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#forro-inscription-merino">Inscripción</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#forro-inscription-tarifa-merino">Inscripción (tarifa)</a>
                   </li>
                 </ul>
               </li>
@@ -304,7 +323,7 @@
           </li>
           <li class="nav-item section-title">
             <a class="nav-link scrollto" href="#steps-c">Steps cinturones</a>
-            <ul class="nav flex-column mt-2 lvl2">
+            <ul class="nav flex-column mt-2 lvl2 steps-options">
               <li class="nav-item">
                 <a class="nav-link scrollto expandable" href="#piel-exterior">Piel exterior</a>
                 <ul class="nav flex-column mt-1 lvl3">
@@ -1145,7 +1164,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1221,7 +1240,7 @@
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
 
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1293,7 +1312,7 @@
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
 
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1368,7 +1387,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1462,7 +1481,7 @@
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
 
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1529,7 +1548,7 @@
 
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1614,7 +1633,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1700,7 +1719,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1780,7 +1799,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1845,7 +1864,7 @@
             
             <h4 class="section-heading pt-3">Configuración primera opción</h4>
             <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -1923,7 +1942,333 @@
             
             <h4 class="section-heading pt-3">Configuración segunda opción</h4>
             <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
+              <thead>
+                <tr>
+                  <th>Id interno</th>
+                  <th>Type</th>
+                  <th>Nombre</th>
+                  <th>Mensaje front office</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Lining___Inscripcion___Price___&lt;uid&gt;</code></td>
+                  <td><code>HIDDEN_INSCRIPTION_PRICE</code></td>
+                  <td>Forro && [hidden] Definición precio inscripción</td>
+                  <td>
+                    -
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            
+            <h4 class="section-heading pt-3">Parametros del id de valor de opción</h4>
+            <p>Todos los ids de los valores tendrán que tener
+              definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).</p>
+            
+              <div class="callout-block callout-block-info">
+
+              <div class="content">
+                <h4 class="callout-title">
+                  Valores de opción fijos
+                </h4>
+                <p>Solo tendremos 2 valores fijos en esta opción y con este orden y estos valores:
+
+                  <ul>
+                    <li>Valor: <code>No</code>, id interno <code class="split">false___Lining___Inscripcion___&lt;uid&gt;</code></li>
+                    <li>Valor: <code>Si</code>, id interno <code class="split">true___Lining___Inscripcion___&lt;uid&gt;</code></li>
+                  </ul>
+      
+                  El valor <code>true</code> se seleccionará cuando la inscripción contenga alguna letra, y el <code>false</code> cuando no. <br><br><br>
+                  Todos los ids de los valores tendrán que tener definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).
+                </p>
+              </div>
+            </div>
+            
+            <table class="mt-4 table table-bordered valueIdparams">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                  <th style="width: 50%;">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Boleano</td>
+                  <td><code>false</code> or <code>true</code></td>
+                  <td>Valor de "sí" o "no"</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Parte del modelo</td>
+                  <td><code>Lining</code></td>
+                  <td>Valor fijo en esta opción, identifica la parte de Threedium</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Información descriptiva</td>
+                  <td><code>Inscripcion</code></td>
+                  <td>Este valor es fijo e informa sobre que opción estamos. Es meramente descriptiva.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Id de producto</td>
+                  <td><code>1-010003-999-0000</code></td>
+                  <td>Id de producto, para crear un identificador único</td>
+                </tr>
+              </tbody>
+              <caption>
+              Ejemplo completo valor "No": <code class="split">false___Lining___Inscripcion___1-010003-999-0000</code><br>
+              Ejemplo completo valor "Si": <code class="split">true___Lining___Inscripcion___1-010003-999-0000</code>
+              </caption>
+            </table>
+          </section>
+
+          <!-- -------------------- -->
+
+          <section class="docs-section" id="forro-merino">
+            <h2 class="section-heading">Forro (merino)</h2>
+            <p>
+              El step del forro con posibilidad de forro y/o plantilla merino usa diferentes Types de opción. Este step tiene 4 opciones de Logicommerce agrupadas.<br>
+              La inscripción consta de dos opciones. Una para introducir el texto y la segunda (oculta) para configurarle una tarifa.
+            </p>
+            <div class="callout-block callout-block-info mt-5 mb-2">
+
+              <div class="content">
+                <p>Los tipos de opción de forro merino pueden funcionar como opciones de forro normal (sin posibilidad de merino), pero no al revés, los tipos de opción de forro normal no pueden
+                  albergar variaciones de merino.</p>
+              </div>
+              <!--//content-->
+            </div>
+          </section>
+
+          <section class="docs-section" id="forro-color-merino">
+            <h3 class="section-heading"><span class="intostep">Forro/</span>Piel <span class="docs-time">Lining/Color</span></h3>
+            
+            <h4 class="section-heading pt-3">Configuración opción</h4>
+            <p>Configuración básica de los campos de la opción</p>
+            <table class="mt-4 table table-bordered opt_params">
+              <thead>
+                <tr>
+                  <th>Id interno</th>
+                  <th>Type</th>
+                  <th>Nombre</th>
+                  <th>Mensaje front office</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Lining___Lining___Color___&lt;uid&gt;</code></td>
+                  <td><code>LINING_MERINO_LEATHER</code></td>
+                  <td>Forro && Forro interior</td>
+                  <td>
+                    Seleccione el tipo de piel y color del &lt;b&gt;forro&lt;/b&gt;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="section-heading pt-3">Parametros del id de valor de opción</h4>
+            <p>Todos los ids de los valores tendrán que tener
+                definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).</p>
+            
+            <table class="mt-4 table table-bordered valueIdparams">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                  <th style="width: 50%;">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Material</td>
+                  <td><code>Lining_calf_red_FORR-00001-0035</code></td>
+                  <td>Material de Threedium, será diferente en cada valor de opción</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Parte del modelo</td>
+                  <td><code>Lining</code> o <code>LiningMerino</code></td>
+                  <td>Identifica la parte de Threedium, si es forro normal o forro de tipo merino.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Material Merino</td>
+                  <td><code>Forro-taupe</code> o <code>NONE</code></td>
+                  <td>Material de Threedium de Merino o NONE si no hace falta, será diferente en cada valor de opción</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Id de producto</td>
+                  <td><code>1-010003-999-0000</code></td>
+                  <td>Id de producto, para crear un identificador único</td>
+                </tr>
+              </tbody>
+              <caption>
+              Ejemplo completo normal: <code class="split">Lining_calf_red_FORR-00001-0035___Lining___NONE___1-010003-999-0000</code><br>
+              Ejemplo completo merino: <code class="split">Lining_calf_red_FORR-00001-0035___LiningMerino___Forro-taupe___1-010003-999-0000</code>
+              </caption>
+            </table>
+          </section>
+
+          <section class="docs-section" id="forro-plantilla-merino">
+            <h3 class="section-heading"><span class="intostep">Forro/</span>Plantilla <span class="docs-time">Lining/Insole</span></h3>
+            
+            <h4 class="section-heading pt-3">Configuración opción</h4>
+            <p>Configuración básica de los campos de la opción</p>
+            <table class="mt-4 table table-bordered opt_params">
+              <thead>
+                <tr>
+                  <th>Id interno</th>
+                  <th>Type</th>
+                  <th>Nombre</th>
+                  <th>Mensaje front office</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Lining___Insole___Insole_merino___&lt;uid&gt;</code></td>
+                  <td><code>LINING_MERINO_INSOLE</code></td>
+                  <td>Forro && Plantilla</td>
+                  <td>
+                    &nbsp;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="section-heading pt-3">Parametros del id de valor de opción</h4>
+            <p>Todos los ids de los valores tendrán que tener
+                definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).</p>
+            
+            <table class="mt-4 table table-bordered valueIdparams">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                  <th style="width: 50%;">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Material</td>
+                  <td><code>NONE</code> o <code>Insole_merino</code></td>
+                  <td>NONE para dejar la plantilla "default" (Sole_interior) o mostrar la plantilla merino.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Material Merino</td>
+                  <td><code>Forro-taupe</code> o <code>NONE</code></td>
+                  <td>Material de Threedium de Merino o NONE si no hace falta, será diferente en cada valor de opción.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Id de producto</td>
+                  <td><code>1-010003-999-0000</code></td>
+                  <td>Id de producto, para crear un identificador único</td>
+                </tr>
+              </tbody>
+              <caption>
+              Ejemplo completo valor "sin plantilla": <code class="split">NONE___NONE___1-010003-999-0000</code><br>
+              Ejemplo completo normal: <code class="split">Insole_merino___Forro-taupe___1-010003-999-0000</code>
+              </caption>
+            </table>
+          </section>
+
+          <section class="docs-section" id="forro-inscription-merino">
+            <h3 class="section-heading"><span class="intostep">Forro/</span>Inscripción <span class="docs-time">Lining/Inscription</span></h3>
+            
+            <h4 class="section-heading pt-3">Configuración primera opción</h4>
+            <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
+            <table class="mt-4 table table-bordered opt_params">
+              <thead>
+                <tr>
+                  <th>Id interno</th>
+                  <th>Type</th>
+                  <th>Nombre</th>
+                  <th>Mensaje front office</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Lining___Lining_name_handwritten-Overlay___Inscripcion___&lt;uid&gt;</code></td>
+                  <td><code>LINING_MERINO_INSCRIPTION</code></td>
+                  <td>Forro && Inscripción</td>
+                  <td>
+                    Selecciona tipo de piel y el &lt;b&gt;forro&lt;/b&gt;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4 class="section-heading pt-3">Parametros del id de opción</h4>
+            <p>Al ser una opción de tipo texto no hay valores. Así que esto se aplica al id de opción.<br>
+              Hay que tener definidos estos parámetros obligatoriamente, separados por <code>___</code> (tres barras bajas).</p>
+            
+            <table class="mt-4 table table-bordered valueIdparams">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                  <th style="width: 50%;">Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Id del step</td>
+                  <td><code>Lining</code></td>
+                  <td>Id del step fija en este id.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Overlay inscripción</td>
+                  <td><code>Lining_name_handwritten-Overlay</code></td>
+                  <td>Nombre del overlay de Threedium del texto de la inscripción</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Sin forro</td>
+                  <td><code>true</code> or <code>false</code></td>
+                  <td>Dos possibles valores fijos. Indica si la inscripción se va a aplicar sobre la parte "sin forro" (no_Lining).</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Información descriptiva</td>
+                  <td><code>Inscription</code></td>
+                  <td>Este valor es fijo e informa sobre que opción estamos. Es meramente descriptivo.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Id de producto</td>
+                  <td><code>1-010003-999-0000</code></td>
+                  <td>Id de producto, para crear un identificador único</td>
+                </tr>
+              </tbody>
+              <caption>
+              Ejemplo normal: <code class="split">Lining___Lining_name_handwritten-Overlay___false___Inscription___1-010003-999-0000</code><br>
+              Ejemplo zapato sin forro: <code class="split">Lining___Lining_name_handwritten-Overlay___true___Inscription___1-010003-999-0000</code>
+              </caption>
+            </table>
+          </section>
+
+          <section class="docs-section" id="forro-inscription-tarifa-merino">
+            <h3 class="section-heading"><span class="intostep">Forro/</span>Inscripción (tarifa) <span class="docs-time">Lining/Price</span></h3>
+            
+            <h4 class="section-heading pt-3">Configuración segunda opción</h4>
+            <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2022,7 +2367,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2107,7 +2452,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2195,7 +2540,7 @@
             
             <h4 class="section-heading pt-3">Configuración primera opción</h4>
             <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2260,7 +2605,7 @@
             
             <h4 class="section-heading pt-3">Configuración segunda opción</h4>
             <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2359,7 +2704,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2459,7 +2804,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2526,7 +2871,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2666,7 +3011,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2731,7 +3076,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2809,7 +3154,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2874,7 +3219,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -2946,7 +3291,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3018,7 +3363,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3083,7 +3428,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3176,7 +3521,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3257,7 +3602,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3330,7 +3675,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3390,7 +3735,7 @@
             
             <h4 class="section-heading pt-3">Configuración primera opción</h4>
             <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3461,7 +3806,7 @@
             
             <h4 class="section-heading pt-3">Configuración segunda opción</h4>
             <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3553,7 +3898,7 @@
             
             <h4 class="section-heading pt-3">Configuración primera opción</h4>
             <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3624,7 +3969,7 @@
             
             <h4 class="section-heading pt-3">Configuración segunda opción</h4>
             <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3723,7 +4068,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3796,7 +4141,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3869,7 +4214,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -3929,7 +4274,7 @@
             
             <h4 class="section-heading pt-3">Configuración primera opción</h4>
             <p>Configuración básica de los campos de la primera opción, de tipo texto.</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -4000,7 +4345,7 @@
             
             <h4 class="section-heading pt-3">Configuración segunda opción</h4>
             <p>Configuración básica de los campos de la segunda opción (de tipo selección unica).</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -4099,7 +4444,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -4173,7 +4518,7 @@
             
             <h4 class="section-heading pt-3">Configuración opción</h4>
             <p>Configuración básica de los campos de la opción</p>
-            <table class="mt-4 table table-bordered">
+            <table class="mt-4 table table-bordered opt_params">
               <thead>
                 <tr>
                   <th>Id interno</th>
@@ -4474,17 +4819,6 @@
                       Todas las imagenes generadas al compartir un producto se guardan en la carpeta <b>/threedium/shared*</b><br>
                       Todas las imagenes generadas al guardar un diseño se guardan en la carpeta <b>/threedium/wishlist*</b><br>
                     </p>
-
-                    <div class="callout-block callout-block-info">
-
-                      <div class="content">
-                        <h4 class="callout-title">
-                          !
-                        </h4>
-                        <p>Esta carpeta y sus archivos no se pueden eliminar o limpiar. Una tarea automática limpiará las que sean demasiado viejas.</p>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
@@ -4618,6 +4952,11 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12">
+                <h6 class="mt-3"><span>Version 1.2.4</span> - 30/10/2022</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Nuevo Step <a href="#forro-merino">Forro (merino)</a>, igual que el forro pero con otros tipos de opción y posibilidad de opciones merino y plantilla merino.</li>
+                </ul>
+
                 <h6 class="mt-3"><span>Version 1.2.3</span> - 18/7/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Cambio del id y posición de la etiqueta de <a href="#my-designs">mis diseños</a></li>
@@ -5026,6 +5365,12 @@
         $(this).next('#results').html(list);
       });
 
+      $('.steps-options > li > ul > li > a').each(function (i, el) {
+        var $cont = $($(el).attr('href'));
+        var html = $cont.find('.opt_params tbody tr td:nth-child(2)').html();
+        $(el).append(html);
+      });
+
       var Lversion = $('#changelogModal .modal-body h6').first().find('span').text().replace('Versión', '').replace('Version', '');;
       $('.site-logo .badge-primary').text('v' + Lversion);
 
@@ -5038,21 +5383,8 @@
       });
 
       setTimeout(() => {
-        // $('#docs-sidebar').scrollTop((window.innerHeight / 2) - $('.docs-nav .nav-link.active').first().position().top);
         var el = $('.docs-nav .nav-link.active').first();
-        var elOffset = el.offset().top;
-        var elHeight = el.height();
-        var windowHeight = $(window).height();
-        var offset;
-
-        if (elHeight < windowHeight) {
-          offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
-        }
-        else {
-          offset = elOffset;
-        }
-        var speed = 0;
-        $('#docs-sidebar').animate({ scrollTop:offset}, speed);
+        el[0].scrollIntoView({ block: "center", behavior: 'smooth' });
       }, 250);
     });
 
