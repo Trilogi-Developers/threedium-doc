@@ -38,30 +38,6 @@ h6 {
   border-color: #515a6a
 }
 
-.popover {
-  border-color: #e0f7e6
-}
-
-.bs-popover-auto[x-placement^=left]>.arrow::before,
-.bs-popover-left>.arrow::before {
-  border-left-color: #e0f7e6
-}
-
-.bs-popover-auto[x-placement^=right]>.arrow::before,
-.bs-popover-right>.arrow::before {
-  border-right-color: #e0f7e6
-}
-
-.bs-popover-auto[x-placement^=top]>.arrow::before,
-.bs-popover-top>.arrow::before {
-  border-top-color: #e0f7e6
-}
-
-.bs-popover-auto[x-placement^=bottom]>.arrow::before,
-.bs-popover-bottom>.arrow::before {
-  border-bottom-color: #e0f7e6
-}
-
 a.theme-link {
   color: #252930;
 }
@@ -118,7 +94,6 @@ a.theme-link:hover {
   padding-top: .875rem;
   padding-bottom: .875rem;
   height: 2.75rem;
-  border-color: #e0f7e6
 }
 
 .form-control:focus {
@@ -172,7 +147,6 @@ a.theme-link:hover {
   top: 0;
   border-radius: 4px;
   transform: skew(25deg, -10deg);
-  moz-transform-origin: top left;
   transform-origin: top left
 }
 
@@ -186,7 +160,6 @@ a.theme-link:hover {
   top: 30px;
   border-radius: 6px;
   transform: skew(25deg, 10deg);
-  moz-transform-origin: top left;
   transform-origin: top left
 }
 
@@ -209,7 +182,6 @@ a.theme-link:hover {
   top: 0;
   border-radius: 6px;
   transform: skew(25deg, -12deg);
-  moz-transform-origin: top left;
   transform-origin: top left
 }
 
@@ -223,7 +195,6 @@ a.theme-link:hover {
   top: 30px;
   border-radius: 4px;
   transform: skew(-25deg, 10deg);
-  moz-transform-origin: top left;
   transform-origin: top left
 }
 
