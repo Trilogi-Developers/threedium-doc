@@ -66,7 +66,7 @@ $(window).on('load resize', function () {
   }
 });
 
-$(document).ready(function () {
+$(function () {
   $('[data-toggle="tooltip"]').tooltip()
 
   /* ====== Toggle Sidebar ======= */
@@ -105,7 +105,7 @@ $(document).ready(function () {
     $('body').scrollTo(urlhash, 0, { offset: -69, 'axis': 'y' });
   }
 
-  $('code.split').not('.split2dots').html(function () {
+  $('code.split').not('.split2dots, .split3dots').html(function () {
     return '<span>' + $(this).html().split('___').join('</span>___<span>') + '</span>';
   });
   $('code.split2dots').html(function () {
@@ -115,6 +115,14 @@ $(document).ready(function () {
       split[i] = '<span class="el">' + split2 + '</span>';
     }
     return split.join(',');
+  });
+  $('code.split3dots').html(function () {
+    var split = $(this).html().split(';');
+    for (let i = 0; i < split.length; i++) {
+      var split2 = '<span class="sub">' + split[i].split(':').join('</span>:<span class="sub">') + '</span>';
+      split[i] = '<span class="el">' + split2 + '</span>';
+    }
+    return split.join(';');
   });
 
   $('h1.docs-heading, h2.section-heading, h3.section-heading').append(function () {
@@ -182,6 +190,20 @@ $(document).ready(function () {
     var el = $('.docs-nav .nav-link.active').first();
     el[0].scrollIntoView({ block: "center", behavior: 'smooth' });
   }, 250);
+
+  $('.docs-content [href^="#"]')
+    .popover({
+      title: function () {
+        return 'Preview';
+      },
+      placement: 'top',
+      html: true,
+      content: function () {
+        return $($($(this).attr('href'))[0].outerHTML);
+      },
+      trigger: 'hover',
+      customClass: 'preview-tooltip',
+    });
 });
 
 window.addEventListener('load', function () {

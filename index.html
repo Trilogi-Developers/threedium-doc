@@ -88,7 +88,7 @@
                     <a class="nav-link scrollto" href="#etiquetas-braided">Braided restricciones (Trenzado)</a>
                   </li>
                   <li class="nav-item section-child">
-                    <a class="nav-link scrollto" href="#etiquetas-horma">Horma restricciones a suela</a>
+                    <a class="nav-link scrollto" href="#etiquetas-horma">Restricciones de suela</a>
                   </li>
                 </ul>
               </li>
@@ -538,7 +538,7 @@
               Validar valor etiqueta
             </button>
             <div class="modal fade" id="validator_ct_transitions" tabindex="-1" aria-labelledby="validator_ct_transitionsLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h4 class="modal-title px-3 py-1" id="validator_ct_transitionsLabel">Validar</h4>
@@ -552,12 +552,8 @@
                         <div class="form-group">
                           <label for="validator_ct_transitions_el">Valor etiqueta:</label>
                           <input pattern="^[\w\-]+:[\w\-]+(?:,[\w\-]+:[\w\-]+)*$" placeholder="Introducir valor..." autofocus type="text" class="form-control" id="validator_ct_transitions_el" aria-describedby="validator_ct_transitions_Help" required>
-                          <div class="invalid-feedback">
-                            No tiene el formato correcto
-                          </div>
-                          <div class="valid-feedback">
-                            ¡Guay!
-                          </div>
+                          <div class="invalid-feedback">No tiene el formato correcto</div>
+                          <div class="valid-feedback">¡Guay!</div>
                         </div>
                       </form>
                     </div>
@@ -768,7 +764,7 @@
               Validar valor etiqueta
             </button>
             <div class="modal fade" id="validator_ct_video" tabindex="-1" aria-labelledby="validator_ct_videoLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h4 class="modal-title px-3 py-1" id="validator_ct_videoLabel">Validar</h4>
@@ -782,12 +778,8 @@
                         <div class="form-group">
                           <label for="validator_ct_video_el">Valor etiqueta:</label>
                           <input pattern="^[\w\-]+:\d+(?:,[\w\-]+:\d+)*$" placeholder="Introducir valor..." autofocus type="text" class="form-control" id="validator_ct_video_el" aria-describedby="validator_ct_transitions_Help" required>
-                          <div class="invalid-feedback">
-                            No tiene el formato correcto
-                          </div>
-                          <div class="valid-feedback">
-                            ¡Guay!
-                          </div>
+                          <div class="invalid-feedback">No tiene el formato correcto</div>
+                          <div class="valid-feedback">¡Guay!</div>
                         </div>
                       </form>
                     </div>
@@ -847,7 +839,7 @@
               Validar valor etiqueta
             </button>
             <div class="modal fade" id="validator_ct_braided" tabindex="-1" aria-labelledby="validator_ct_braidedLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h4 class="modal-title px-3 py-1" id="validator_ct_braidedLabel">Validar</h4>
@@ -861,12 +853,8 @@
                         <div class="form-group">
                           <label for="validator_ct_braided_el">Valor etiqueta:</label>
                           <input pattern="^[\w\-]+:[\w\-]+(?:,[\w\-]+:[\w\-]+)*$" placeholder="Introducir valor..." autofocus type="text" class="form-control" id="validator_ct_braided_el" aria-describedby="validator_ct_transitions_Help" required>
-                          <div class="invalid-feedback">
-                            No tiene el formato correcto
-                          </div>
-                          <div class="valid-feedback">
-                            ¡Guay!
-                          </div>
+                          <div class="invalid-feedback">No tiene el formato correcto</div>
+                          <div class="valid-feedback">¡Guay!</div>
                         </div>
                       </form>
                     </div>
@@ -876,6 +864,71 @@
             </div>
           </section>
 
+          <section class="docs-section" id="etiquetas-horma">
+            <h3 class="section-heading">Restricciones de suela</h3>
+            Since <span class="badge badge-primary">v1.2.0</span>
+
+            <p>
+              <img src="./img/newSoleBottom.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom"><br>
+              En el nuevo tipo de opción <a href="#hormaysuela-suela">Horma y suela/Suela</a> hay restricciones segun la horma seleccionada.<br>
+              Como una horma puede bloquear varias suelas, se ha hecho esta etiqueta para definir estas restricciones.<br>
+              <br>
+              Por cada valor de horma definiremos quales valores de suela se van a restringir.
+            </p>
+
+            <table class="mt-4 table table-bordered">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Descripción</th>
+                  <th>Posición</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>soleBottomRestrictions</td>
+                  <td>Esta etiqueta es <b>requerida</b> si usamos los tipos de opción <code>SOLE_SHAPE</code> y <code>SOLE_BOTTOM</code>.<br>El valor será: "<code>&lt;id_valor_horma&gt;:&lt;id_valor_suela&gt;,&lt;id_valor_suela&gt;</code>". Para definir varias restricciones haremos lo
+                    mismo pero separando con "<code>;</code>".<br>
+                    No hay maximo de 255 caracteres.<br>
+                    No debe acabar con "<code>,</code>" ni "<code>;</code>"
+                  </td>
+                  <td>28</td>
+                </tr>
+              </tbody>
+              <caption>
+                Ejemplo:<br>
+                <code class="split split3dots">Rain_LAST-0001-0EE:Sole_Leather_PISO-0001_270_TH-00;Simpson_LAST-0002-00E:Sole_Tomir_PISO-0085_270_TH-00,Sole_Rendenbach_PISO-0004_270_TH-00</code>
+              </caption>
+            </table>
+
+            <button type="button" class="btn-validator btn btn-secondary d-flex" data-toggle="modal" data-target="#validator_ct_solebottom">
+              Validar valor etiqueta
+            </button>
+            <div class="modal fade" id="validator_ct_solebottom" tabindex="-1" aria-labelledby="validator_ct_solebottomLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title px-3 py-1" id="validator_ct_solebottomLabel">Validar</h4>
+                    <button type="button" class="close p-4" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <form class="needs-validation mb-4" novalidate>
+                        <div class="form-group">
+                          <label for="validator_ct_solebottom_el">Valor etiqueta:</label>
+                          <input pattern="^[\w\-]+:[\w\-]+(,[\w\-]+)*(;[\w\-]+:[\w\-]+(,[\w\-]+)*)*$" placeholder="Introducir valor..." autofocus type="text" class="form-control" id="validator_ct_solebottom_el" aria-describedby="validator_ct_transitions_Help" required>
+                          <div class="invalid-feedback">No tiene el formato correcto</div>
+                          <div class="valid-feedback">¡Guay!</div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <!-- --------------------- -->
 
@@ -2533,7 +2586,7 @@
                 <h4 class="callout-title">
                   Restricciones
                 </h4>
-                <p>Todos los valores de esta opción serán restringidos segun la etiqueta <a href="#etiquetas-horma">Horma restricciones</a>.</p>
+                <p>Todos los valores de esta opción serán restringidos segun la etiqueta <a href="#etiquetas-horma">Restricciones de suela</a>.</p>
               </div>
               <!--//content-->
             </div>
@@ -5023,7 +5076,7 @@
 
   <!-- Modal -->
   <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title px-3 py-1" id="changelogModalLabel">Changelog documentación</h4>
