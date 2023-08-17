@@ -902,7 +902,7 @@ h3.section-heading small {
 }
 
 .docs-nav .lvl2 .nav-link {
-  padding: 0.35rem 1rem;
+  padding: 0.35rem 0rem 0.35rem 1rem;
   gap: .5rem;
 }
 
@@ -923,7 +923,7 @@ h3.section-heading small {
 .docs-nav .lvl2>li>ul.lvl3>li>.nav-link .badge {
   position: absolute;
   top: 50%;
-  right: -1rem;
+  right: -3rem;
   transform: translateY(-50%);
 }
 
