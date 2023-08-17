@@ -1026,14 +1026,14 @@ span.core-v:not(:empty) {
 }
 
 .preview-tooltip .popover-body>* {
-  max-height: 220px;
+  max-height: 200px;
   overflow: hidden;
 }
 
 .preview-tooltip .popover-body:after {
   content: "";
   display: block;
-  height: 200px;
+  height: 190px;
   position: absolute;
   bottom: 0;
   left: 0;

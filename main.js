@@ -204,6 +204,16 @@ $(function () {
       trigger: 'hover',
       customClass: 'preview-tooltip',
     });
+
+  $('[id*="validator"]')
+    .on('show.bs.modal', function () {
+      var modal = $(this);
+      modal.find('.modal-body input').val('').trigger('focus');
+    })
+    .on('hide.bs.modal', function () {
+      var modal = $(this);
+      modal.find('form')[0].classList.remove('was-validated');
+    });
 });
 
 window.addEventListener('load', function () {
