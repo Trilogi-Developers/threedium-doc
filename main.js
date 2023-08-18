@@ -203,6 +203,7 @@ $(function () {
       },
       trigger: 'hover',
       customClass: 'preview-tooltip',
+      delay: 500,
     });
 
   $('[id*="validator"]')

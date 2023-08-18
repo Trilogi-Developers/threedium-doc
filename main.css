@@ -1012,7 +1012,7 @@ span.core-v:not(:empty) {
   color: var(--theme-colort);
 }
 
-.callout-block.callout-block-info a[data-toggle="tooltip"] {
+.docs-content [href^="#"] {
   position: relative;
   display: inline-block;
 }
@@ -1048,4 +1048,7 @@ span.core-v:not(:empty) {
 
 .preview-tooltip .docs-section h4 {
   font-size: .75rem;
+}
+.preview-tooltip img {
+  display: none;
 }
