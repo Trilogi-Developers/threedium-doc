@@ -67,7 +67,7 @@
                 <a class="nav-link scrollto" href="#layout-plantilla">Layout y plantilla</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link scrollto expandable" href="#etiquetas">Etiquetas</a>
+                <a class="nav-link scrollto expandable" href="#etiquetas">Etiquetas de producto</a>
                 <ul class="nav flex-column mt-1 lvl3">
                   <li class="nav-item section-child">
                     <a class="nav-link scrollto" href="#etiquetas-api">API de threedium</a>
@@ -106,6 +106,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#my-designs">Mis diseños</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#hormasCustom">Hormas custom</a>
               </li>
             </ul>
           </li>
@@ -1103,6 +1106,35 @@
               Automáticamente se mostrará esta página en los menus de usuario. Se le puede añadir una url seo para que sea mas identificable la ruta.</p>
             <img src="./img/designs.png" class="img-fluid img-thumbnail" data-action="zoom">
           </section>
+
+          <section class="docs-section" id="hormasCustom">
+            <h3 class="section-heading">Hormas custom</h3>
+            Since <span class="badge badge-primary mb-3">v1.2.0</span>
+
+            <p>
+              Esta <b>etiqueta de usuario</b> sirve para guardar la información de si el usuario tiene hormas personalizadas disponibles. Esto se guarda una vez pagado el
+              pedido.<br><br>
+              Esto servirá para que en la opción <a href="#hormaysuela-horma">Horma y suela/Horma</a> se muestren las hormas "custom":<br>
+              <img src="./img/hormasCustom.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom"><br>
+            </p>
+
+            <table class="mt-4 table table-bordered">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Descripción</th>
+                  <th>Posición</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>customSoleShape</td>
+                  <td>Su valor será "vacío" o "1".
+                  </td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
 
         </article>
 
@@ -2475,8 +2507,10 @@
                 <tr>
                   <td>3</td>
                   <td>Horma custom</td>
-                  <td><code>CUSTOM</code> or <code>NONE</code></td>
-                  <td>Indica que el valor de opción es "CUSTOM" y no se mostrarà si no se cumplen las condiciones. "NONE" para las hormas normales.</td>
+                  <td><code>CUSTOM_SELECTABLE</code> or <code>CUSTOM</code> or <code>NONE</code></td>
+                  <td>Si el valor es <code>CUSTOM_SELECTABLE</code> este valor se mostrarà solo si el usuario esta logeado y es agente o este está simulando otro y tiene incremento de precio para hacer una horma personalizada.<br>
+                    Si el valor es <code>CUSTOM</code> este serà una horma personalizada, se separaran estos valores de las hormas "normales", se mostrarán solo si el usuario tiene guardado en la etiqueta <a href="#hormasCustom">Hormas custom</a> un valor.<br>
+                    <code>NONE</code> para las hormas normales.</td>
                 </tr>
                 <tr>
                   <td>4</td>
@@ -2488,8 +2522,18 @@
               <caption>
                 Ejemplo horma normal: <code class="split">Rain_LAST-0001-0EE___Soles___NONE___1-000910-999-0000</code><br>
                 Ejemplo horma personalizada: <code class="split">Rain_LAST-0001-0EE___Soles___CUSTOM___1-000910-999-0000</code><br>
+                Ejemplo valor para personalizar horma: <code class="split">customShapeValue___Soles___CUSTOM_SELECTABLE___1-000910-999-0000</code><br>
               </caption>
             </table>
+
+            <div class="callout-block callout-block-warning">
+              <div class="content">
+                <h4 class="callout-title">
+                  Hormas "custom"
+                </h4>
+                <p>Todas los valores de tipo <code>CUSTOM_SELECTABLE</code> or <code>CUSTOM</code> deben ir al final de todos los valores de opción.</p>
+              </div>
+            </div>
           </section>
 
           <section class="docs-section" id="hormaysuela-suela">
@@ -5094,6 +5138,7 @@
                   <li class="ml-3">Nueva opción <a href="#hormaysuela-horma">Horma y suela/Horma</a></li>
                   <li class="ml-3">Nueva opción <a href="#hormaysuela-suela">Horma y suela/Suela (SOLE_BOTTOM)</a></li>
                   <li class="ml-3">Nueva etiqueta para restringir las suelas segun la horma: <a href="#etiquetas-horma">Horma restricciones (a suela)</a></li>
+                  <li class="ml-3">Nueva etiqueta para guardar en el usuario si tiene horma custom: <a href="#hormasCustom">Hormas custom</a></li>
                 </ul>
 
                 <h6 class="mt-3"><span class="doc-v">Doc v1.2.5</span><span class="core-v">Core v1.1.9</span> - 05/06/2023</h6>
