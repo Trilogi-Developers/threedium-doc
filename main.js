@@ -67,6 +67,8 @@ $(window).on('load resize', function () {
 });
 
 $(function () {
+  $("html, body").scrollTo(window.location.hash, 250, { offset: -69, 'axis': 'y' });
+
   $('[data-toggle="tooltip"]').tooltip()
 
   /* ====== Toggle Sidebar ======= */
