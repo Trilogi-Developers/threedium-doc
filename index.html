@@ -1114,11 +1114,11 @@
             <p>
               Con el nuevo tipo de <a href="#hormaysuela-horma">Horma y suela/Horma</a> se ha añadido una funcionalidad extra con la horma.<br>
               Ahora se puede escoger una horma personalizada.<br><br>
-              Un agente o un agente simulando un usuario pueden escoger el valor de opción "Horma exclusiva para tus pies":<br>
+              Un agente o un agente simulando un usuario o un usuario con esta etiqueta llena, pueden escoger "Horma exclusiva para tus pies":<br>
               <img src="./img/hormaPies.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom"><br>
-              Una vez comprado el zapato con este valor de opción se rellenará una etiqueta de usuario con un valor.<br>
-              Cuando el usuario tenga un valor en su etiqueta, se le mostrarán hormas personalizadas:<br>
+              Que al hacer click mostrarà las hormas personalizadas a escoger. <br>
               <img src="./img/hormasCustom.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom"><br><br>
+              Una vez comprado el zapato con este valor de opción se rellenará una etiqueta de usuario con un valor.<br>
               Al escoger (en la primera foto) hay un botón de más información que abre un <strong>menu</strong> cuyo html es una <strong>página de posición 230</strong>:<br>
               <img src="./img/menuHorma.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom">
             </p>
@@ -2518,9 +2518,8 @@
                 <tr>
                   <td>3</td>
                   <td>Horma custom</td>
-                  <td><code>CUSTOM_SELECTABLE</code> or <code>CUSTOM</code> or <code>NONE</code></td>
-                  <td>Si el valor es <code>CUSTOM_SELECTABLE</code> este valor se mostrarà solo si el usuario esta logeado y es agente o este está simulando otro y tiene incremento de precio para hacer una horma personalizada.<br>
-                    Si el valor es <code>CUSTOM</code> este serà una horma personalizada, se separaran estos valores de las hormas "normales", se mostrarán solo si el usuario tiene guardado en la etiqueta <a href="#hormasCustom">Hormas custom</a> un valor.<br>
+                  <td><code>CUSTOM</code> or <code>NONE</code></td>
+                  <td>Si el valor es <code>CUSTOM</code> este valor se mostrarà solo si el usuario esta logeado y es agente o este está simulando otro o el usuario tiene guardado en la etiqueta <a href="#hormasCustom">Hormas custom</a> un valor.<br>
                     <code>NONE</code> para las hormas normales.</td>
                 </tr>
                 <tr>
@@ -2533,7 +2532,6 @@
               <caption>
                 Ejemplo horma normal: <code class="split">Rain_LAST-0001-0EE___Soles___NONE___1-000910-999-0000</code><br>
                 Ejemplo horma personalizada: <code class="split">Rain_LAST-0001-0EE___Soles___CUSTOM___1-000910-999-0000</code><br>
-                Ejemplo valor para personalizar horma: <code class="split">customShapeValue___Soles___CUSTOM_SELECTABLE___1-000910-999-0000</code><br>
               </caption>
             </table>
 
@@ -2542,7 +2540,7 @@
                 <h4 class="callout-title">
                   Hormas personalizadas
                 </h4>
-                <p>Todos los valores de tipo <code>CUSTOM_SELECTABLE</code> or <code>CUSTOM</code> deben ir al final de todos los valores de opción.<br>
+                <p>Todos los valores de tipo <code>CUSTOM</code> deben ir al final de todos los valores de opción.<br>
                   Para que el sistema de hormas personalizadas se <b>requiere</b> del funcionamiento de <a href="#hormasCustom">Hormas custom</a></p>
               </div>
             </div>
@@ -5144,6 +5142,11 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12">
+                <h6 class="mt-3"><span class="doc-v">Doc v1.2.7</span><span class="core-v">Core v1.2.0</span> - 31/08/2023</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Ajustes sobre el funcionamiento del nuevo tipo de opción de horma</li>
+                </ul>
+
                 <h6 class="mt-3"><span class="doc-v">Doc v1.2.6</span><span class="core-v">Core v1.2.0</span> - 22/08/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Deprecada la opción <a href="#hormaysuela-type">Horma y suela/Suela (SOLE_TYPE)</a></li>
