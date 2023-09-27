@@ -216,8 +216,27 @@ $(function () {
     .on('hide.bs.modal', function () {
       var modal = $(this);
       modal.find('form')[0].classList.remove('was-validated');
+      modal.find('.preview').html('');
     });
 });
+
+function makeTableHTML(myArray) {
+  var result = "<label>Preview datos:</label><table class=\"table table-bordered\">";
+  for (var i = 0; i < myArray.length; i++) {
+    result += "<tr>";
+    for (var j = 0; j < myArray[i].length; j++) {
+      let tdCont = myArray[i][j];
+      if (Array.isArray(tdCont)) {
+        tdCont = tdCont.join('<br>')
+      }
+      result += "<td>" + tdCont + "</td>";
+    }
+    result += "</tr>";
+  }
+  result += "</table>";
+
+  return result;
+}
 
 window.addEventListener('load', function () {
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -230,6 +249,26 @@ window.addEventListener('load', function () {
         event.stopPropagation();
       }
       form.classList.add('was-validated');
+
+      const $modal = $(this).closest('.modal');
+      const $input = $(this).find('input[pattern]');
+      if ($input.is(':valid')) {
+        // Add here
+        if ($modal.is('#validator_ct_transitions') || $modal.is('#validator_ct_video') || $modal.is('#validator_ct_braided')) {
+          let preview = makeTableHTML($input.val().split(',').map((el) => el.split(':')));
+          $modal.find('.preview').html(preview);
+        } else if ($modal.is('#validator_ct_solebottom')) {
+          let data = $input.val().split(';').map((el) => el.split(':'));
+          data.forEach(el => {
+            el[1] = el[1].split(',')
+          });
+          console.log(data);
+          let preview = makeTableHTML(data);
+          $modal.find('.preview').html(preview);
+        }
+      } else {
+        $modal.find('.preview').html('');
+      }
     }, false);
   });
 }, false);
