@@ -1049,6 +1049,15 @@ span.core-v:not(:empty) {
 .preview-tooltip .docs-section h4 {
   font-size: .75rem;
 }
+
 .preview-tooltip img {
   display: none;
+}
+
+.preview:empty {
+  display: none;
+}
+
+.preview table {
+  font-size: 12px;
 }
