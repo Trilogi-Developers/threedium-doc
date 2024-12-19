@@ -1005,10 +1005,10 @@ caption {
 
 span.doc-v:not(:empty) {
   color: var(--secondary);
+  padding-right: 5px;
 }
 
 span.core-v:not(:empty) {
-  padding: 0 0px 0px 5px;
   color: var(--theme-colort);
 }
 
@@ -1028,6 +1028,22 @@ span.core-v:not(:empty) {
 .preview-tooltip .popover-body>* {
   max-height: 200px;
   overflow: hidden;
+}
+
+.preview-tooltip article {
+  padding: 0;
+}
+
+.preview-tooltip article h1 {
+  font-size: 1.5em;
+}
+
+.preview-tooltip article h2 {
+  font-size: 1.25em;
+}
+
+.preview-tooltip .docs-article .docs-section {
+  padding: 1rem 0;
 }
 
 .preview-tooltip .popover-body:after {

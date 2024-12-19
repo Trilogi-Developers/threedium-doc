@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -378,6 +378,19 @@
     <!--//docs-sidebar-->
     <div class="docs-content">
       <div class="container">
+
+        <div class="p-5 mb-4 mt-4 bg-body-tertiary rounded-lg" style="background-image: url(./img/drivers_suelas_banner_desk.jpg);background-position: center;background-size: cover;">
+          <div class="py-5 text-white">
+            <h1 class="display-5 fw-bold text-white">Carmina Customizer Threedium</h1>
+            <p class="fs-4">Documentación de integración de Logicommerce con Threedium y el personalizador.</p>
+            
+            <div class="d-flex mt-4" style="gap: 1rem;">
+              <a href="#steps" class="btn btn-primary" type="button">Steps zapatos</a>
+              <a href="#steps-c" class="btn btn-primary" type="button">Steps cinturón</a>
+              <a href="#resumen" class="btn btn-primary" type="button">Resumen</a>
+            </div>
+          </div>
+        </div>
 
         <article class="docs-article" id="configuration-general">
           <header class="docs-header">
@@ -1170,11 +1183,16 @@
             </table>
 
             <p><br>En el caso de cumplirse las condiciones para que se muestren estas etiquetas de posición 4, se mostraràn en el bloque de usuario en el checkout:<br>
+              <ul>
+                <li>Customtag id <code>customSoleShape</code> con valor <i><code>vacío</code></i></li>
+                <li>La cesta contenga al menos un producto con una horma <code>CUSTOM</code> seleccionada</li>
+                <li>Ser un usuario sales agent o ser un usuario simulado por un sales agent</li>
+              </ul>
               <img src="./img/ctshorma.jpg" class="mb-3 mt-4 img-fluid img-thumbnail" data-action="zoom"></p>
 
               <h4 class="section-heading pt-3">Relacionados al comprar</h4>
 
-              <p>En la capa lateral de producto añadido a la cesta, se ha creado una nueva <b>sección de relacionados de posición 5</b>.<br>
+              <p>En la capa lateral de producto añadido a la cesta, se ha creado una nueva <b>sección de relacionados de posición 15</b>.<br>
                 Los relacionados de producto se mostraràn si se cumplen las siguientes condiciones: El usuario es un agente o un usuario simulado, y el producto comprado tiene una
                 horma personalizada o ya hay un producto con horma personalizada en el basket.
               </p>
@@ -4821,9 +4839,10 @@
 
           <section class="docs-section" id="resumen-options">
             <h2 class="section-heading">Opciones del resumen</h2>
+            <span class="badge badge-warning badge-deprecated mb-3">deprecated</span> since <span class="badge badge-primary">v2.0.0</span>
             <p>
               Si en el campo imagen de la opción como "type" ponemos <code>RESUME</code>, esa opción automaticamente se
-              mostrará en el paso final del personalizador.
+              mostrará en el desplegable de talla del personalizador.
             </p>
             <img src="./img/resumen.jpg" class="img-fluid img-thumbnail" data-action="zoom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="./img/resumeType.jpg" class="img-fluid img-thumbnail" data-action="zoom">
@@ -5036,7 +5055,7 @@
 
                 <div id="collap--20000" class="collapse" aria-labelledby="headingAcc-20000" data-parent="#accOthers">
                   <div class="card-body">
-                    <p>Todas las imagenes generadas al comprar un producto se guardan en el FTP en la carpeta <b>/threedium/orders*</b>.<br>
+                    <p>
                       Todas las imagenes generadas al compartir un producto se guardan en la carpeta <b>/threedium/shared*</b><br>
                       Todas las imagenes generadas al guardar un diseño se guardan en la carpeta <b>/threedium/wishlist*</b><br>
                     </p>
@@ -5173,32 +5192,46 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12">
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.9</span><span class="core-v">Core v1.2.2</span> - 11/10/2023</h6>
+                <!-- <h6 class="mt-3">Doc v<span class="doc-v">1.2.9</span> Core v<span class="core-v">2.0.0</span> - 16/12/2024</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Nueva version del core en Logicommerce Beyond</li>
+                  <li class="ml-3">Opciones del resumen deprecation</li>
+                </ul>
+
+                <hr class="mb-5"> -->
+
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.10</span> Core v<span class="core-v">1.2.2</span> - 18/12/2024</h6>
+                <ul class="mt-3 mb-5">
+                  <li class="ml-3">Añadir las condiciones para mostrar las etiquetas de usuario al checkout <a href="#hormasCustom">Hormas custom</a>.</li>
+                  <li class="ml-3">Arreglada la posición de la sección de relacionados de 5 a 15 en <a href="#hormasCustom">Hormas custom</a>.</li>
+                </ul>
+
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.9</span> Core v<span class="core-v">1.2.2</span> - 11/10/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Bug fix del core para corregir que el parametro de la id de opción de <a href="#hormaysuela-horma">Horma y suela/Horma</a> sea 'shape' o 'Shape'.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.9</span><span class="core-v">Core v1.2.1</span> - 27/09/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.9</span> Core v<span class="core-v">1.2.1</span> - 27/09/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Update etiquetas de <a href="#hormasCustom">Hormas custom</a> sobre las etiquetas de usuario.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.8</span><span class="core-v">Core v1.2.1</span> - 27/09/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.8</span> Core v<span class="core-v">1.2.1</span> - 27/09/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Preview de valores en la validación de etiquetas</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.7</span><span class="core-v">Core v1.2.1</span> - 27/09/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.7</span> Core v<span class="core-v">1.2.1</span> - 27/09/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Bug fix customizer core al cambiar de opción de horma.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.7</span><span class="core-v">Core v1.2.0</span> - 31/08/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.7</span> Core v<span class="core-v">1.2.0</span> - 31/08/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Ajustes sobre el funcionamiento del nuevo tipo de opción de horma</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.6</span><span class="core-v">Core v1.2.0</span> - 22/08/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.6</span> Core v<span class="core-v">1.2.0</span> - 22/08/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Deprecada la opción <a href="#hormaysuela-type">Horma y suela/Suela (SOLE_TYPE)</a></li>
                   <li class="ml-3">Nueva opción <a href="#hormaysuela-horma">Horma y suela/Horma</a></li>
@@ -5208,89 +5241,89 @@
                   <li class="ml-3">Documentación mejorada con preview de links y resolución de bugs</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.5</span><span class="core-v">Core v1.1.9</span> - 05/06/2023</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.5</span> Core v<span class="core-v">1.1.9</span> - 05/06/2023</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida información de versiones de la documentación y el core del personalizador.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.4</span><span class="core-v">Core v1.1.9</span> - 30/10/2022</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.4</span> Core v<span class="core-v">1.1.9</span> - 30/10/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Nuevo Step <a href="#forro-merino">Forro (merino)</a>, igual que el forro pero con otros tipos de opción y posibilidad de opciones merino y plantilla merino.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.3</span><span class="core-v"></span> - 18/07/2022</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.3</span> span> <span class="core-v"></- 18/07/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Cambio del id y posición de la etiqueta de <a href="#my-designs">mis diseños</a></li>
                   <li class="ml-3">FAQ's actualizado con las rutas del FTP</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.2</span><span class="core-v"></span> - 17/03/2022</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.2</span> span> <span class="core-v"></- 17/03/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Corregidos varios errores en los ejemplos de las opciones de inscripciones.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.1</span><span class="core-v"></span> - 04/03/2022</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.1</span> span> <span class="core-v"></- 04/03/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida el step de cinturón <a href="#stitches-c">Costura</a>.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.2.0</span><span class="core-v"></span> - 03/03/2022</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.2.0</span> span> <span class="core-v"></- 03/03/2022</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadido documentación de <a href="#steps-c">Steps cinturón</a> con tipos de opcion nuevos.</li>
                   <li class="ml-3">Arreglos menores de la documentación.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.20</span><span class="core-v"></span> - 18/11/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.20</span> span> <span class="core-v"></- 18/11/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadido el sistema de <a href="#my-designs">Mis diseños</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.19</span><span class="core-v"></span> - 03/11/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.19</span> span> <span class="core-v"></- 03/11/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida etiqueta de <a href="#etiquetas-braided">Etiquetas->Braided restricciones (Trenzado)</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.18</span><span class="core-v"></span> - 14/09/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.18</span> span> <span class="core-v"></- 14/09/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Pequeña aclaración en la descripción de <a href="#etiquetas-monocolor">Etiquetas->Sistema monocolor</a></li>
                   <li class="ml-3">Actualización de la FAQ: "Donde se guardan las imagenes generadas de los modelos comprados (FTP)"</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.17</span><span class="core-v"></span> - 26/08/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.17</span> span> <span class="core-v"></- 26/08/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida duda "Donde se guardan las imagenes generadas de los modelos comprados (FTP)" en <a href="#faqs-otros">FAQs->Otros</a></li>
                   <li class="ml-3">Añadido un parametro adicional en todos los valores de opción del tipo Bruñido. Para solucionar un problema de ids duplicados en Logicommerce.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.16</span><span class="core-v"></span> - 11/08/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.16</span> span> <span class="core-v"></- 11/08/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida la documentación para el <a href="#etiquetas-ayuda">sistema de ayuda (videos)</a>.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.15</span><span class="core-v"></span> - 05/08/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.15</span> span> <span class="core-v"></- 05/08/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida sección de <a href="#faqs">FAQs</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.14</span><span class="core-v"></span> - 05/08/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.14</span> span> <span class="core-v"></- 05/08/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">La opción de <a href="#talon-piel">Talón/Piel</a> pasa de tener el type SIMPLE_MATERIAL a HEEL para poder controlar el parametro "sin forro".</li>
                   <li class="ml-3">Se ha añadido el parametro "sin forro" en el id de opción de <a href="#forro-inscription">Forro/Inscripción</a></li>
                   <li class="ml-3">Reescrita la descripción de los parametros de "material sin forro" de <a href="#pala-piel">Pala/Piel</a> y <a href="#talon-piel">Talón/Piel</a> con ejemplos para que quede mas claro.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.13</span><span class="core-v"></span> - 30/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.13</span> span> <span class="core-v"></- 30/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadidos las transiciones aplicadas por defecto, steps, opciones y transition names. <a href="#etiquetas-transitions">Transiciones</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.12</span><span class="core-v"></span> - 28/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.12</span> span> <span class="core-v"></- 28/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Actualizado todo el bloque de <a href="#etiquetas">Etiquetas</a> ahora separado por temas.</li>
                   <li class="ml-3">Añadidas las etiquetas del <a href="#etiquetas-monocolor">Sistema monocolor</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.11</span><span class="core-v"></span> - 26/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.11</span> span> <span class="core-v"></- 26/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida etiqueta "Non configurable parts" en <a href="#etiquetas">Etiquetas de producto</a></li>
                   <li class="ml-3">En todos los steps que puede haber una opción de bruñido, cambian los parametros de las opciones que los restringen:</a></li>
@@ -5303,32 +5336,32 @@
                   <li class="ml-3">Añadida documentación de una posible <a href="#pala-floron">Pala/Florón</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.10</span><span class="core-v"></span> - 20/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.10</span> span> <span class="core-v"></- 20/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida configuración de transiciones via etiqueta: <a href="#etiquetas-transiciones">Transiciones</a></li>
                   <li class="ml-3">Añadida configuración de etiquetas de threedium para su version tablet/mobile: <a href="#etiquetas">Etiquetas de producto</a></li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.9</span><span class="core-v"></span> - 19/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.9</span> span> <span class="core-v"></- 19/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Arreglado el error de documentación de los Bruñidos, (<a href="#puntera-brunido">Puntera/Bruñido</a>,
                     <a href="#pala-burnish">Pala/Bruñido</a>, <a href="#talon-brunido">Talon/Bruñido</a>)
                   </li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.8</span><span class="core-v"></span> - 19/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.8</span> span> <span class="core-v"></- 19/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Cordones/Color, arreglado el ejemplo.</li>
                   <li class="ml-3">Cordones/Tipo, ahora el type es CHANGE_PART_RESTRICTION</li>
                   <li class="ml-3">Cordones/Color, ahora el type es SIMPLE_MATERIAL_RESTRICTED</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.7</span><span class="core-v"></span> - 16/07/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.7</span> span> <span class="core-v"></- 16/07/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Cordones/Color, añadido tercer parámetro para la restricción by Cordones/Tipo</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.6</span><span class="core-v"></span> - 29/06/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.6</span> span> <span class="core-v"></- 29/06/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Cambios en los valores de muchos ejemplos</li>
                   <li class="ml-3">"ToeCap" ahora se llama "Toe"</li>
@@ -5341,12 +5374,12 @@
                   <li class="ml-3">Edge/Color ahora tiene los parámetros de material del picado y del stormwelt</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.5</span><span class="core-v"></span> - 28/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.5</span> span> <span class="core-v"></- 28/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Eliminado culet overlay entry del step Vamp</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.4</span><span class="core-v"></span> - 27/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.4</span> span> <span class="core-v"></- 27/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadido el parámetro de "Sin forro" a Talón->Piel</li>
                   <li class="ml-3">Actualizado el step Cordones (Tipo y color)</li>
@@ -5354,25 +5387,25 @@
                   <li class="ml-3">Corregidos varios errores menores</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.3</span><span class="core-v"></span> - 25/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.3</span> span> <span class="core-v"></- 25/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Pala (Vamp) ahora tiene mas parámetros de id de valor de opción. Material culet, culet overlay, culet entry, burnish y no lining material.</li>
                   <li class="ml-3">Pala (Vamp) ahora su TYPE es "VAMP"</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.2</span><span class="core-v"></span> - 20/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.2</span> span> <span class="core-v"></- 20/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadido parámetro Id de horma en los id de valor de la opción Horma y Suela->Suela</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.1</span><span class="core-v"></span> - 19/05/2021 <!-- <span class="c-alert">Cambios importantes</span> --></h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.1</span> span> <span class="core-v"></- 19/05/2021 <!-- <span class="c-alert">Cambios importantes</span> --></h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Eliminada temporalmente la opción culet por cambio de funcionamiento</li>
                   <li class="ml-3">Añadido posible valor "triple" en Canto->Grossor</li>
                   <li class="ml-3">Nueva etiqueta de configuración del producto con la versión de la librería de Threedium, a requerimiento de su sistema de publicacion de modelo.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.1.0</span><span class="core-v"></span> - 19/05/2021 <!-- <span class="c-alert">Cambios importantes</span> --></h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.1.0</span> span> <span class="core-v"></- 19/05/2021 <!-- <span class="c-alert">Cambios importantes</span> --></h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Update de la codificación de los ids de valores de opción de:</li>
                   <ul>
@@ -5383,12 +5416,12 @@
                   </ul>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.8</span><span class="core-v"></span> - 17/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.8</span> span> <span class="core-v"></- 17/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Update step Hebillas</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.7</span><span class="core-v"></span> - 13/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.7</span> span> <span class="core-v"></- 13/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Update Horma y suela->Inscripción</li>
                   <ul>
@@ -5400,7 +5433,7 @@
                   </ul>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.6</span><span class="core-v"></span> - 10/05/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.6</span> span> <span class="core-v"></- 10/05/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Documentada la opción asociada a una inscripción para poder asociar un precio.</li>
                   <ul>
@@ -5408,19 +5441,19 @@
                   </ul>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.5</span><span class="core-v"></span> - 28/04/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.5</span> span> <span class="core-v"></- 28/04/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadido documentación de Forro->Inscripción</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.4</span><span class="core-v"></span> - 08/03/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.4</span> span> <span class="core-v"></- 08/03/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Descripción de Canto->Grosor corregida.</li>
                   <li class="ml-3">Descripción de Canto->Vira y picado corregida.</li>
                   <li class="ml-3">Añadido ejemplo id real de Hebillas.</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.3</span><span class="core-v"></span> - 04/03/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.3</span> span> <span class="core-v"></- 04/03/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Documentación de bruñido</li>
                   <ul>
@@ -5429,17 +5462,17 @@
                   </ul>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.2</span><span class="core-v"></span> - 18/02/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.2</span> span> <span class="core-v"></- 18/02/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Añadida sección de "Grid de valores"</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.1</span><span class="core-v"></span> - 15/02/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.1</span> span> <span class="core-v"></- 15/02/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Opción Forro->Culet documentada</li>
                 </ul>
 
-                <h6 class="mt-3"><span class="doc-v">Doc v1.0.0</span><span class="core-v"></span> - 12/02/2021</h6>
+                <h6 class="mt-3">Doc v<span class="doc-v">1.0.0</span> span> <span class="core-v"></- 12/02/2021</h6>
                 <ul class="mt-3 mb-5">
                   <li class="ml-3">Primera versión de la documentación</li>
                 </ul>
